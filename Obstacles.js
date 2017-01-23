@@ -6,11 +6,12 @@
  *
  */
 
-var x,y;
+var x,y,y3,y4;
 function initializeObstacle() {
  
 x=700
 y=300
+//println ("initialize Obstacle")
 
 }
 
@@ -21,8 +22,10 @@ function updateObstacle() {
   //insert the code that draws the obstacle
   
   if(x <= -width) {
-  x = 700;
+  x = 700-40;
   y = Math.floor((Math.random() * 300) + 40);
+  y3 = y;
+  y4 = y + 40;
 } else {
   x = x - 10;
   // push() //right edge of the triangle
@@ -34,7 +37,7 @@ function updateObstacle() {
   
   //rect(x, y, 24, 24);
   fill(0,0,0);
-  quad(x+700-40,y,x+700-10,y+40,x+700-20,y+30,x+700-30,y+40)
+  quad(x,y,x+30,y+40,x+20,y+30,x+10,y+40)
   //ellipse(700+x, y, 10, 10);
   //rect(x,y,30,10)
   

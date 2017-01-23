@@ -4,6 +4,8 @@ function setup() {
    initializeBackground();
    initializeCharacter();
    initializeObstacle();
+   initializeGameOver();
+
 }
    
 function draw() {
@@ -11,5 +13,5 @@ function draw() {
   updateBackground();
   updateCharacter();
   updateObstacle();
-  
+  updateGameOver();
 }
