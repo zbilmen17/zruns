@@ -1,7 +1,7 @@
 /*This background.js file will hold the main functionality of the program
  *
  *Program description:
- *ADD HERE
+ *This background file creates moving elements to implement a sense of terrain in the game environment. It utilizes loops as well as ellipses to do so. 
  *
  */
 
@@ -15,10 +15,11 @@ var xbac,ybac,wbac,hbac;
 
 //Implement
 function initializeBackground(){
-    xbac = 680
+    xbac = 680 //these essentially define the ellipse dimensions before the background update function runs. It helps a lot. 
     ybac = 300
     wbac = 40
     hbac = 60
+    //println ("background initialized")
 //ellipse(xbac,ybac,wbac,hbac)
 }
 
@@ -30,6 +31,7 @@ function updateBackground(){
   xbac = xbac-4
   if (xbac < 0)
   xbac = 670
+  //println ("Background Updated")
 }
 
 //Change or implement as needed

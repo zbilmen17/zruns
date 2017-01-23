@@ -1,63 +1,42 @@
-/*This character.js file will hold the functions 
- * that intialize and udpate the character
- *
- *File description:
- *ADD HERE
- *
+ //Character File
+ /*File Description:
+ *This file holds the functions that initialize and update the character.
+ *The character itself is drawn with a combination of circles (for the face) and rectangles (for the glasses).
  */
 
-var xZac;
-var yZac;
-var lense;
-
-
-/*function setup() {
-   createCanvas (700,300);
-   initializeCharacter ();
-   }*/
-
 function initializeCharacter() {
-  xZac=45;
+  xZac=45;//Initializes and Defines Variables 
   yZac=225;
-  lense=195;
-
+  lenser=205;
+  lensel=205;
 }
 
 function updateCharacter() {
-  //insert code that make the character move when either the mouse
-  //moves or keys are pressed.
-  //println(keyCode);
-  if (keyCode == 38) {
+  //This function makes the character move when either the up and down keys are pressed.
+  if (keyCode == 38) {//Makes the character move up when the up key is pressed
     yZac=yZac-1;
-    lense=lense-1
-  } else if (keyCode == 40) {
+    lenser=lenser-1;
+    lensel=lensel-1;
+  } else if (keyCode == 40) {//Makes the character move down when the down key is pressed
     yZac=yZac+1;
-    lense=lense+1
+    lenser=lenser+1;
+    lensel=lensel+1;
   }
   
-  //insert the code that draws the character
-  var c = color(255, 204, 0);  // Define color 'c'
-  fill(c);  // Use color variable 'c' as fill color
-  noStroke();  // Don't draw a stroke around shapes
-  ellipse(xZac,yZac,70,78)
-  var f = color(15, 104, 0);  // Define color 'c'
-  fill(f);  // Use color variable 'c' as fill color
-  noStroke();  // Don't draw a stroke around shapes
-  ellipse(xZac, yZac, 35, 55);
-  var g = color(40, 184, 0);  // Define color 'c'
-  fill(g);  // Use color variable 'c' as fill color
-  rect(xZac, lense, 30, 25, 20);
+  //The code that draws the character
+  var c = color(255, 204, 0);  // Defines color 'c' 
+  fill(c);  // Use color variable 'c' as fill color for the outer ellipse
+  ellipse(xZac,yZac,70,78)//Draws the outer ellipse
+  var f = color(15, 104, 0);  // Defines color 'f' 
+  fill(f);  // Use color variable 'c' as fill color for the inner ellipse
+  ellipse(xZac, yZac+10, 20, 20);//Draws the inner ellipse
+  var g = color(40, 184, 0);  // Define color 'g' 
+  fill(g);  // Use color variable 'c' as fill color for the rectangles 
+  rect(xZac, lenser, 30, 25, 20);//Draws the right rectangle
+  rect(xZac-30,lensel,30,25,20);//Draws the left rectangle
 }
 
 
-/*function draw() {
-  background(750);
-  updateCharacter();
-  clear();
-  updateObstacle()
-}*/
-
-  
 
 
 
